@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css?family=Martel+Sans:400,700&display=swap');
+
+:root {
+    --primary-color: #811719;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Martel Sans', sans-serif;
+}
+
+body {
+    /* make a fade transition between pages */
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+#page {
+    /* background-color: var(--primary-color); */
+    height: 100vh;
+    width: 98vw;   
+}
+
+#header {
+    height: 60px;
+    width: 98vw;
+    background-color: rgb(231, 231, 231);
+    border: 3px solid var(--primary-color);
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo img {
+    height: 45px;
+    position: absolute;
+    left:5px;
+    top: 5px;
+}
+
+#msg {
+    padding-top: 13px;
+}
+
+#header-menu {
+    display: none;
+}
+
+.icon {
+    height: 28px;
+    margin-top: 11px;
+    padding-right: 19px;
+}
+
+#hamburger img {
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+#container {
+    position: relative;
+}
+
+#searchbar {
+    width: 98vw;
+    text-align: right;
+    /* background-color: rgb(255, 196, 214); */
+
+}
+
+#searchbar img {
+    height: 20px;
+    position: absolute;
+    right: 15px;
+    top: 13px;
+}
+
+#searchbar input {
+    margin-top: 5px;
+    margin-right: 8px;
+    padding: 5px 17px;
+    width: 1px;
+    border-radius: 100vh;
+    background-color: grey;
+    border: 1px solid rgb(78, 78, 78);
+
+    transition: width 1s;
+}
+
+#searchbar input::placeholder {
+    color: rgb(189, 189, 189);
+}
+
+#searchbar input:focus {
+    outline: 0;
+}
+
+#searchbar input:hover, #searchbar input:active {
+    width: 200px;
+}
+
+#results {
+    display: flex;
+    flex-wrap: wrap;
+    width: 98vw;
+    border: 3px solid var(--primary-color);
+
+    /* background-color: rgb(255, 196, 214); */
+    background-color: rgb(231, 231, 231);
+    
+}
+
+.carCard {
+    margin: 10px;
+    padding: 4px;
+    height: 235px;
+    background-color: #fff;
+    border: 1px solid var(--primary-color);
+    position: relative; /* for absolute positioning of .carCardBottom */
+}
+
+.carCard:hover  {
+    border: 2px solid var(--primary-color);
+    padding: 3px;
+}
+
+.carCard h3.name, .carCard h3.model {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.6rem;
+    padding-left: 14px;
+}
+
+.carCard img{
+    width: 145px;
+}
+
+.carCardBottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 145px;
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 2px;
+}
+
+.columnHeader {
+    font-size: 0.8rem;
+}
+
+.doorsColumn {
+    text-align: center;
+}
+
+.priceColumn {
+    text-align: right;
+}
+
+/********************************************************/
+/************* layout for non-smartphones ***************/
+@media only screen and (min-width: 600px) {
+    #header-menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    .carCard img{
+        width: 175px;
+    }
+
+    .carCardBottom {
+        width: 175px;
+    }
+}

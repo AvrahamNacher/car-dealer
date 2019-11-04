@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Martel+Sans:400,700&display=swap');
+
+:root {
+    --primary-color: #811719;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: 'Martel Sans', sans-serif;
+}
+
+body {
+    /* make a fade transition between pages */
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    background: url("../img/login-car.jpg") fixed center/cover no-repeat;
+    position: relative;
+}
+
+#container h1 {
+    color: var(--primary-color);
+    position: absolute;
+    top: 20vh;
+    left: 20vw;
+}
+
+#login {
+    width:300px;
+    height: 300px;
+    margin: auto 0 auto -400px;
+    background-color: rgba(255, 255, 255, 0.596);
+    border-radius: 1vh;
+    position: absolute;
+    bottom: 18vh;
+    left: 120%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    text-align: center;
+}
+
+#login h3 {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    margin-top: 5px;
+}
+
+#login h4 {
+    padding-top: 5px;
+    font-weight: 400;
+}
+
+#login input {
+    margin: 12px 20px;
+    padding: 10px 0 10px 15px;
+    border: none;
+    border-radius: 1vh;
+    box-shadow: 1px 2px 5px 1px;
+    background-color: rgba(255, 255, 255, 0.753);
+}
+
+input#button {
+    width: 100px;
+    align-self:center;
+    padding-left: 0px;  /* other buttons in this div have padding-left of 15px */
+}
+
+/********************************************************/
+/************* layout for non-smartphones ***************/
+@media only screen and (min-width: 600px) {
+    #login {
+        width: 400px;
+        /* height: 200px; */
+        /* margin: auto 0 auto -400px; */
+        /* background-color: rgba(255, 255, 255, 0.596); */
+        /* position: absolute; */
+        bottom: 6vh;  /* //30px */
+        left: 50%;
+    }
+    
+}

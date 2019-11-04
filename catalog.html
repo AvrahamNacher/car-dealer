@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Car Catalog</title>
+    <link rel="stylesheet" href="css/catalog.css">
+</head>
+<body>
+    <div id="page">
+
+        <div id="header">
+            <div id="logo">
+                <img src="./img/logo.png" alt="logo">
+            </div>
+            <div id="msg">
+                <h3>No new messages</h3>
+            </div>
+            <div id="hamburger"><img src="./img/Hamburger_icon.png" alt="menu button"></div>
+            <div id="header-menu">
+                <div><a href="#"><img class="icon" src="./img/reports_icon_png.jpg" alt="Reports"></a></div>
+                <div><a href="#"><img class="icon" src="./img/car_icon.png" alt="Vehicles"></a></div>
+                <div><a href="#"><img class="icon" src="./img/gear_icon_png.jpg" alt="Settings"></a></div>
+                <div><a href="#"><img class="icon" src="./img/profile_icon.png" alt="Profile"></a></div>
+            </div>
+            
+        </div>
+        <div id="container">
+            <div id="searchbar">
+                <img id="magnifying-glass" src="./img/magnifying glass.png" alt="search">
+                <input id="searchtext" type="text" id="searchbar-text" placeholder="Search ... entire catalog">
+            </div>
+            <div id="results"> <!-- search results go here -->
+            </div>
+            
+        </div>
+    </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="js/catalog.js"></script>
+</body>
+</html>
